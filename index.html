@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <input type="checkbox" id="theme" />
+    <h1 class="heading">Music Player</h1>
+    <div class="container">
+      <div id="genre">
+        <label for="all-genre">Filter by Genre: </label>
+
+        <select name="all-genre" id="myGenre">
+          <option id="select-genre" value="All" selected>All</option>
+          <option id="select-genre" value="Hip Hop">Hip Hop</option>
+          <option id="select-genre" value="Rock">Rock</option>
+          <option id="select-genre" value="Pop">Pop</option>
+        </select>
+        <div id="all-songs">
+          <h1>All Songs</h1>
+        </div>
+      </div>
+      <div id="player">
+        <div id="player-image">
+          <img
+            src="./artist/alan-walker-faded.jpeg"
+            alt="Alan Walker"
+            id="image"
+          />
+          <h1 id="song-name">Faded</h1>
+          <p id="artist-name">Alan Walker</p>
+        </div>
+        <audio id="audio-player" controls>
+          <source src="./music/Faded.mp3" type="audio/mp3" />
+        </audio>
+        <div class="controls">
+          <div class="control-btn">
+            <button id="previous" type="submit">
+              <i class="fa-solid fa-backward-step"></i>
+            </button>
+            <button id="next" type="submit">
+              <i class="fa-solid fa-forward-step"></i>
+            </button>
+          </div>
+          <button class="add-btn" id="add-btn" type="submit">
+            Add to Playlist
+          </button>
+        </div>
+      </div>
+      <div id="playlist">
+        <form id="createPlaylistForm">
+          <input
+            type="text"
+            id="playlistName"
+            placeholder="Enter playlist name"
+          />
+          <button type="submit" class="submit-button">Create Playlist</button>
+        </form>
+        <div id="myPlaylist">
+          <div class="currPlayList">
+            <h2>Current Playlist</h2>
+          </div>
+          <div class="allPlayList">
+            <h2>All Playlists</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
